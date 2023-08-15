@@ -2,11 +2,13 @@ import { configureStore } from '@reduxjs/toolkit'
 import UserdataSlice from './UserdataSlice'
 import TodoListSlice from './TodoListSlice'
 import { productApi } from './apiServices/product'
+import showTextSlice from './showTextSlice'
 
 export const store = configureStore({
   reducer: {
     userdata:UserdataSlice,
     todolistSlice:TodoListSlice,
+    showtext:showTextSlice,
     [productApi.reducerPath]: productApi.reducer,
   },
   middleware: (getDefaultMiddleware) =>

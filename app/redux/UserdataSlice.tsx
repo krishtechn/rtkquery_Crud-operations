@@ -34,7 +34,7 @@ export const counterSlice = createSlice({
     remove(state,action){
        state = state.filter((items:any)=>items.id !== action.payload)  
        return state;
-      }
+    }
   },
 })
 

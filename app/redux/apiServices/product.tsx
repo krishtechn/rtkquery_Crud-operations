@@ -15,12 +15,17 @@ export const productApi = createApi({
             query: (id) => ({
                 url: `products/${id}`,
                 method: 'DELETE',
-                // credentials: 'include',
-
             }),
             invalidatesTags: ['product'],
+        }),
+        updateProducts:builder.mutation({
+            query: ({id}) => ({
+                url: `products/${id}`,
+                method: 'PATCH',
+              }),
+              invalidatesTags: ['product'],
         }),
     }),
 })
 
-export const { useGetAllProductsQuery, useDeleteProductsMutation } = productApi;
+export const { useGetAllProductsQuery, useDeleteProductsMutation,useUpdateProductsMutation } = productApi;

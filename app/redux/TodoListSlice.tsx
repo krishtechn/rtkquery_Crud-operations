@@ -14,7 +14,7 @@ export const fetchTodos = createAsyncThunk("fetchTodos", async () => {
     return json;
 });
 
-export const counterSlice = createSlice({
+export const todoList = createSlice({
     name: 'todoList',
     initialState,
     reducers:{
@@ -34,4 +34,4 @@ export const counterSlice = createSlice({
     },
 })
 
-export default counterSlice.reducer
+export default todoList.reducer
